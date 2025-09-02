@@ -1,8 +1,8 @@
 <?php
 $nilai = [
-    "Andi" => ["Matematika" => 80, "IPA" => 90, ],
-    "Budi" => ["Matematika" => 75, "IPA" => 88, ],
-    "Citra" => ["Matematika" => 92, "IPA" => 81, ],
+    "Andi" => ["Matematika" => 60, ],
+    "Budi" => ["Matematika" => 85, ],
+    "Citra" => ["Matematika" => 74, ],
 ];
 
 foreach ($nilai as $nama => $mapel) {
@@ -10,6 +10,12 @@ foreach ($nilai as $nama => $mapel) {
     foreach ($mapel as $pelajaran => $angka) {
         echo "- $pelajaran: $angka <br>";
     }
+    if ($angka >= 75) {
+        echo "Selamat $nama , Anda lulus!<br>";
+    } else {
+        echo "Maaf $nama , Anda tidak lulus.<br>";
+    }
+    echo "<br>";
     echo "<br>";
 }
 ?>
